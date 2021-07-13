@@ -1,7 +1,22 @@
+/* Global Vars */
+:root {
+  /* --primary-dark: rgb(24, 24, 24);
+  --primary-light: rgb(245, 245, 245);
+  --secondary-dark: rgb(19, 19, 19); */
+  --primary-dark: #181b1f;
+  --secondary-dark: #272e32;
+  --primary-light: #eee;
+  --primary-blue-opaque: #548ca820;
+  --section-border: #202a32;
+  --primary-blue: #548CA8;
+  --primary-highlight: #CA3E47;
+  --primary-highlight-opaque: #ca3e4770;
+
+}
+
 /* Reset */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
+html, body, div, span, applet, object, iframe, a,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
@@ -17,6 +32,7 @@ time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
+  	color: var(--primary-light);
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -26,7 +42,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-  font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 ol, ul {
 	list-style: none;
@@ -44,8 +60,18 @@ table {
 	border-spacing: 0;
 }
 
-/* Global Vars */
-:root {
-    --primary-dark: rgb(24, 24, 24);
-    --primary-light: rgb(245, 245, 245);
+
+.section-header {
+	left: 0;
+	right: 0;
+	margin: auto;
+	display: inline-block;
+	border-bottom: var(--primary-highlight) .125rem solid;
+	font-size: 2rem;
+    margin-bottom: 1.4rem;
+	padding-bottom: .6rem;
+}
+
+.border-top {
+	border-top: var(--section-border) 0.2rem solid;
 }

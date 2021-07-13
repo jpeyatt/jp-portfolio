@@ -1,11 +1,13 @@
 
 header {
     background: var(--primary-dark);
+    /* border-bottom: 0.2rem #374856 solid; */
+
     overflow: hidden;
+    z-index: 999;
 }
 
 h1, h4 {
-    color: var(--primary-light);
     text-align: center;
 }
 
@@ -13,12 +15,14 @@ h1  {
     margin: 1rem 2rem;
     font-size: 5em;
     font-family: 'Ramabhadra', sans-serif;
+    animation: 1.8s fade-in, 0.8s slide-up;
 }
 
 h4 {
     font-size: 2.3rem;
     font-weight: 200;
     margin: 0.2rem 1rem;
+    animation: 1.8s fade-in, 1.2s slide-up;
 }
 
 .header-content {
@@ -28,6 +32,24 @@ h4 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(150px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 

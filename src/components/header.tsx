@@ -2,15 +2,19 @@ import React from 'react';
 import '../styles/header.css';
 import { FunctionComponent } from 'react';
 import Typer from './typer';
+import Nav from './nav';
 
 const Header: FunctionComponent = () => {
     const titles = [
         'Front End Engineer.',
+        'Competitive Latte Sipper.',
         'JavaScript Developer.'
     ];
 
     return (
         <header id="portfolio-header">
+            <Nav />
+
             <div id="stars" />
             <div id="stars2" />
             <div id="stars3" />
