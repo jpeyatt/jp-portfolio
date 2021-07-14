@@ -4,6 +4,7 @@
   --primary-light: rgb(245, 245, 245);
   --secondary-dark: rgb(19, 19, 19); */
   --primary-dark: #181b1f;
+  --primary-dark-opaque: #181b1f5a;
   --secondary-dark: #272e32;
   --primary-light: #eee;
   --primary-blue-opaque: #548ca820;
