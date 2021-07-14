@@ -4,7 +4,7 @@ nav {
   width: 100%;
   position: fixed;
   top: 0;
-  height: 5.125rem;
+  height: 4rem;
   display: flex;
   justify-content: space-evenly;
   z-index: 999;
@@ -70,7 +70,7 @@ nav {
 .mobile-menu.open > .hamburger-line:last-child {
   opacity: 0;
   transform: translate(0px, -6px) rotate(180deg);
-  transition: all ease-in-out .2s;
+  transition: transform ease-in-out .2s;
 }
 
 nav a {
@@ -99,8 +99,8 @@ nav a {
 .not-at-top {
   background: var(--primary-blue-opaque);
   transition: all ease-in-out 0.3s;
-  height: 5.125rem;
-  line-height: 5.125rem;
+  height: 5rem;
+  line-height: 5rem;
   align-items: center;
 
   /* backdrop-filter: blur(5px); */
@@ -148,6 +148,10 @@ nav a {
     transition: all ease-in-out 0.4s;
     z-index: -99;
     border-left: var(--section-border) 1px solid;
+  }
+  .not-at-top {
+    height: 4rem;
+    line-height: 4rem;
   }
   .mobile-menu {
     display: block;

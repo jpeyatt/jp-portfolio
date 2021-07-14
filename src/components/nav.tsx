@@ -1,10 +1,11 @@
-import React, { FunctionComponent, useEffect, useState } from "react";
+import React, { FunctionComponent, useEffect, useRef, useState } from "react";
 import '../styles/nav.css';
 
 const Nav: FunctionComponent = () => {
     const [navClass, setNavClass] = useState('at-top');
-    const mobileMenuBtnEl = document.querySelector('#mobile-menu-button');
-    const linksEl = document.querySelector('#links');
+    // const mobileMenuBtnRef = document.querySelector('#mobile-menu-button');
+    const linksRef = useRef<HTMLButtonElement>(null);
+    const mobileMenuBtnRef = useRef<HTMLUListElement>(null);
 
     const handleScroll = () => {
         if (window.scrollY > 80) setNavClass('not-at-top');
@@ -12,6 +13,8 @@ const Nav: FunctionComponent = () => {
     }
 
     const onMenuBtnClick = () => {
+        const linksEl = linksRef.current;
+        const mobileMenuBtnEl = mobileMenuBtnRef.current;
         if (mobileMenuBtnEl?.classList.contains('open')) {
             mobileMenuBtnEl?.classList.remove('open');
             linksEl?.classList.remove('open');
@@ -22,7 +25,14 @@ const Nav: FunctionComponent = () => {
     }
 
     useEffect(() => {
+        const linksEl = linksRef.current;
         window.addEventListener('scroll', handleScroll, true);
+        if (linksEl) linksEl.addEventListener('click', onMenuBtnClick);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            if (linksEl) linksEl.removeEventListener('click', onMenuBtnClick);
+        };
     }, []);
 
     return (
@@ -30,12 +40,12 @@ const Nav: FunctionComponent = () => {
             <ul className="brand-logo">
                 <li>JP.</li>
             </ul>
-            <button id="mobile-menu-button" onClick={onMenuBtnClick} className="mobile-menu">
+            <button ref={linksRef} id="mobile-menu-button" className="mobile-menu">
                 <div className="hamburger-line"></div>
                 <div className="hamburger-line"></div>
                 <div className="hamburger-line"></div>
             </button>
-            <ul id="links" className="links">
+            <ul ref={mobileMenuBtnRef} id="links" className="links">
                 <li><a href="/">About Me</a></li>
                 <li><a href="/">Projects</a></li>
                 <li><a href="/">Resume</a></li>

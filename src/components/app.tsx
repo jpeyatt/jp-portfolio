@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react';
+import React, { FunctionComponent, useEffect, useRef } from 'react';
 import Header from './header';
 import Stack from './stack';
 import Footer from './footer';
@@ -6,9 +6,19 @@ import '../styles/app.css';
 
 
 const App: FunctionComponent = () => {
+  const appWrapperRef = useRef<HTMLDivElement>(null);
+
+  const scrollToTop = () => {
+
+  }
+
+  useEffect(() => {
+
+    window.scrollTo({top: 0});
+  });
 
   return (
-    <div id="app-wrapper">
+    <div ref={appWrapperRef} id="app-wrapper">
       <Header />
       <Stack />
       <Footer />
