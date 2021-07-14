@@ -8,12 +8,7 @@ import '../styles/app.css';
 const App: FunctionComponent = () => {
   const appWrapperRef = useRef<HTMLDivElement>(null);
 
-  const scrollToTop = () => {
-
-  }
-
   useEffect(() => {
-
     window.scrollTo({top: 0});
   });
 
