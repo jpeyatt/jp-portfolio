@@ -70,7 +70,6 @@ nav {
 .mobile-menu.open > .hamburger-line:last-child {
   opacity: 0;
   transform: translate(0px, -6px) rotate(180deg);
-  transition: transform ease-in-out .2s;
 }
 
 nav a {
