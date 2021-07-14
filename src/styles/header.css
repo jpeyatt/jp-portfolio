@@ -114,6 +114,16 @@ h4 {
 
 /* END Blinking Cursor */
 
+/* Mobile */
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 3.2rem;
+  }
+  h4 {
+    font-size: 1.3rem;
+  }
+}
+
 /* Header Stars Background */
   
   #stars {
