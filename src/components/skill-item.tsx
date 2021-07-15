@@ -10,7 +10,7 @@ const SkillItem: FunctionComponent<ISkillTypeProps> = ({ skillName, percentage }
 
     useEffect(() => {
         setLoadedWidth(percentage)
-    }, []);
+    }, [percentage]);
 
     return (
         <div className="skill">
