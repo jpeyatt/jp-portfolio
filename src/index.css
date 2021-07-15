@@ -76,3 +76,7 @@ table {
 .border-top {
 	border-top: var(--section-border) 0.2rem solid;
 }
+
+.html {
+	scroll-behavior: smooth;
+}

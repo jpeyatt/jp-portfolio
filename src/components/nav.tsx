@@ -40,6 +40,7 @@ const Nav: FunctionComponent = () => {
     useEffect(() => {
         const linksEl = linksRef.current;
         window.addEventListener("scroll", handleScroll, true);
+            
         if (linksEl) linksEl.addEventListener("click", onMenuBtnClick);
 
         return () => {
@@ -61,10 +62,10 @@ const Nav: FunctionComponent = () => {
             <div ref={openOverelayRef} className="open-mobile-menu-overlay"></div>
             <ul ref={mobileMenuBtnRef} id="links" className="links">
                 <li>
-                    <a href="/">About Me</a>
+                    <a href="#portfolio-header">About Me</a>
                 </li>
                 <li>
-                    <a href="/">Projects</a>
+                    <a href="#skills">Skills</a>
                 </li>
                 <li>
                     <a href="/">Resume</a>
