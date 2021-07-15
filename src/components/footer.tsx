@@ -5,13 +5,23 @@ const Footer: FunctionComponent = () => {
     return (
         <footer className="border-top">
             <div className="col-left">
-                Column Left
+                <ul className="brand-logo-footer">
+                    <li>JP.</li>
+                </ul>
             </div>
             <div className="col-mid">
-                Column Middle
+                <a href="https://www.linkedin.com/in/justinpeyatt" target="_blank" rel="noreferrer" className="social-icon">
+                    <img src="/assets/images/icons/linkedin.svg" alt="LinkedIn Icon" />
+                </a>
+                <a href="https://www.instagram.com/peyattj" target="_blank" rel="noreferrer" className="social-icon">
+                    <img src="/assets/images/icons/instagram.svg" alt="Instagram Icon" />
+                </a>
+                <a href="https://github.com/jpeyatt" target="_blank" rel="noreferrer" className="social-icon">
+                    <img src="/assets/images/icons/github.svg" alt="Github Icon" />
+                </a>
             </div>
             <div className="col-right">
-                Column Right
+                © 2021 Justin Peyatt
             </div>
         </footer>
     );
