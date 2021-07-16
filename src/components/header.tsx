@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/header.css';
 import { FunctionComponent } from 'react';
 import Typer from './typer';
-import Nav from './nav';
+
 
 const Header: FunctionComponent = () => {
     const titles = [
@@ -13,8 +13,6 @@ const Header: FunctionComponent = () => {
 
     return (
         <header id="portfolio-header">
-            <Nav />
-
             <div id="stars" />
             <div id="stars2" />
             <div id="stars3" />

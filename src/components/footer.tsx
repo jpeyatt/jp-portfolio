@@ -19,6 +19,9 @@ const Footer: FunctionComponent = () => {
                 <a href="https://github.com/jpeyatt" target="_blank" rel="noreferrer" className="social-icon">
                     <img src="/assets/images/icons/github.svg" alt="Github Icon" />
                 </a>
+                <a href="mailto:justinpeyatt@gmail.com" target="_blank" rel="noreferrer" className="social-icon">
+                    <img src="/assets/images/icons/at-sign.svg" alt="Github Icon" />
+                </a>
             </div>
             <div className="col-right">
                 © 2021 Justin Peyatt

@@ -18,6 +18,11 @@ const Nav: FunctionComponent = () => {
         }
     };
 
+    const onNavLinkClick = () => {
+        const mobileMenuBtnEl = mobileMenuBtnRef.current;
+        if (mobileMenuBtnEl?.classList.contains("open")) onMenuBtnClick();
+    };
+
     const onMenuBtnClick = () => {
         const linksEl = linksRef.current;
         const mobileMenuBtnEl = mobileMenuBtnRef.current;
@@ -62,16 +67,16 @@ const Nav: FunctionComponent = () => {
             <div ref={openOverelayRef} className="open-mobile-menu-overlay"></div>
             <ul ref={mobileMenuBtnRef} id="links" className="links">
                 <li>
-                    <a href="#portfolio-header">About Me</a>
+                    <a onClick={onNavLinkClick} href="#portfolio-header">About Me</a>
                 </li>
                 <li>
-                    <a href="#skills">Skills</a>
+                    <a onClick={onNavLinkClick} href="#skills">Skills</a>
                 </li>
                 <li>
-                    <a href="/">Resume</a>
+                    <a onClick={onNavLinkClick} href="/">Resume</a>
                 </li>
                 <li>
-                    <a href="/">Contact</a>
+                    <a onClick={onNavLinkClick} href="/">Contact</a>
                 </li>
             </ul>
         </nav>

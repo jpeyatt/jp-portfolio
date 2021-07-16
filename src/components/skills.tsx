@@ -12,13 +12,13 @@ const Skills: FunctionComponent = () => {
 
             <div className="skills">
 
-                <div className="skills-column">
+                <div className="skills-column skills-col-left">
                     <SkillItem skillName="JavaScript" percentage={80} />
                     <SkillItem skillName="React" percentage={50} />
                     <SkillItem skillName="Python" percentage={30} />
                 </div>
 
-                <div className="skills-column">
+                <div className="skills-column skills-col-right">
                     <SkillItem skillName="Angular" percentage={75} />
                     <SkillItem skillName="CSS" percentage={65} />
                     <SkillItem skillName="C#" percentage={40} />
