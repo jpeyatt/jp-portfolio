@@ -5,9 +5,9 @@ const Footer: FunctionComponent = () => {
     return (
         <footer className="border-top">
             <div className="col-left">
-                <ul className="brand-logo-footer">
-                    <li>JP.</li>
-                </ul>
+                <div className="brand-logo-footer">
+                    <a href="/">JP.</a>
+                </div>
             </div>
             <div className="col-mid">
                 <a href="https://www.linkedin.com/in/justinpeyatt" target="_blank" rel="noreferrer" className="social-icon">

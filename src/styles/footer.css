@@ -14,7 +14,7 @@ footer {
 
 .col-left {
   display: flex;
-  justify-content: center;  
+  justify-content: center;
   align-items: center;
 }
 
@@ -22,9 +22,15 @@ footer {
   font-size: 3rem;
 }
 
-.brand-logo-footer > li {
+.brand-logo-footer > a {
+  text-decoration: none;
   color: var(--primary-highlight);
   font-family: "Ubuntu", sans-serif;
+  transition: color ease-in-out 0.4s;
+}
+
+.brand-logo-footer > a:hover {
+    color: var(--primary-highlight-opaque);
 }
 
 .social-icon {
@@ -36,7 +42,7 @@ footer {
   width: 2.4rem;
 }
 .social-icon:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 .col-mid {

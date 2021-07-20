@@ -29,11 +29,15 @@ const SkillItem: FunctionComponent<ISkillTypeProps> = ({ skillName, percentage }
                 window.removeEventListener('scroll', () => {});
             }
         });
+
+        return () => {
+            window.removeEventListener('scroll', () => {});
+        }
         
     }, [percentage]);
 
     return (
-        <div className="skill scrolled">
+        <div className="skill">
             <div className="skill-name">{skillName}</div>
             <div className="load-bar">
                 <div style={{width: loadedWidth + '%'}} className="loaded">

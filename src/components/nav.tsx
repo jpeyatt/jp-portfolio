@@ -56,9 +56,9 @@ const Nav: FunctionComponent = () => {
 
     return (
         <nav ref={navRef} className="at-top">
-            <ul className="brand-logo">
-                <li>JP.</li>
-            </ul>
+            <div className="brand-logo">
+                <a href="/">JP.</a>
+            </div>
             <button ref={linksRef} id="mobile-menu-button" className="mobile-menu">
                 <div className="hamburger-line"></div>
                 <div className="hamburger-line"></div>
@@ -73,7 +73,7 @@ const Nav: FunctionComponent = () => {
                     <a onClick={onNavLinkClick} href="#skills">Skills</a>
                 </li>
                 <li>
-                    <a onClick={onNavLinkClick} href="/">Resume</a>
+                    <a onClick={onNavLinkClick} href="/#resume">Resume</a>
                 </li>
                 <li>
                     <a onClick={onNavLinkClick} href="/">Contact</a>
