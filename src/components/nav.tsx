@@ -76,7 +76,7 @@ const Nav: FunctionComponent = () => {
                     <a onClick={onNavLinkClick} href="/#resume">Resume</a>
                 </li>
                 <li>
-                    <a onClick={onNavLinkClick} href="/">Contact</a>
+                    <a onClick={onNavLinkClick} href="/#contact">Contact</a>
                 </li>
             </ul>
         </nav>

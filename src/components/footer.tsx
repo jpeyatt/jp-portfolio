@@ -3,7 +3,7 @@ import '../styles/footer.css';
 
 const Footer: FunctionComponent = () => {
     return (
-        <footer className="border-top">
+        <footer id="contact" className="border-top">
             <div className="col-left">
                 <div className="brand-logo-footer">
                     <a href="/">JP.</a>
