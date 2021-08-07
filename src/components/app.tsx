@@ -5,9 +5,11 @@ import '../styles/app.css';
 import Skills from './skills';
 import Nav from './nav';
 import Resume from './resume';
+import Projects from './projects';
 
 
 const App: FunctionComponent = () => {
+
 
   return (
     <div id="app-wrapper">
@@ -15,6 +17,7 @@ const App: FunctionComponent = () => {
       <Header />
       <Skills />
       <Resume />
+      <Projects  />
       <Footer />
     </div>
   );

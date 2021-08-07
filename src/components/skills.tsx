@@ -4,10 +4,10 @@ import '../styles/skills.css';
 
 const Skills: FunctionComponent = () => {
     return (
-        <section id="skills" className="skills-section border-top">
+        <section id="skills" className="portfolio-section skills-section">
 
-            <div className="skills-header">
-                <h2 className="section-header">Skills</h2>
+            <div className="section-header">
+                <h1>Skills</h1>
             </div>
 
             <div className="skills">

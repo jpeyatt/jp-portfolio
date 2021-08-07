@@ -5,7 +5,7 @@ interface IResumeItemProps {
     companyName: string;
     title: string;
     summary: string;
-    responsibilities: string[];
+    responsibilities: { key: string, text: string }[];
 }
 const ResumeItem: FunctionComponent<IResumeItemProps> = ({dates, companyName, title, summary, responsibilities}) => {
     const resumeItemRef = useRef<HTMLDivElement>(null);
@@ -51,7 +51,7 @@ const ResumeItem: FunctionComponent<IResumeItemProps> = ({dates, companyName, ti
                 <div className="summary">{summary}</div>
                 <ul className="responsibilities">
                     {
-                        responsibilities.map((r) => <li>{r}</li>)
+                        responsibilities.map((r) => <li key={r.key}>{r.text}</li>)
                     }
                 </ul>
             </div>

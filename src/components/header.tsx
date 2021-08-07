@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/header.css';
+import '../styles/header-stars-bg.css';
 import { FunctionComponent } from 'react';
 import Typer from './typer';
 
@@ -12,11 +13,11 @@ const Header: FunctionComponent = () => {
     ];
 
     return (
-        <header id="portfolio-header">
+        <header id="portfolio-header ">
             <div id="stars" />
             <div id="stars2" />
             <div id="stars3" />
-            <div className="header-content">
+            <div className="header-content border-bottom">
                 <h1>Hi, I'm Justin.</h1>
                 <h4>I'm a <Typer
                     textSets={titles}

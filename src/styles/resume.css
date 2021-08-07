@@ -1,17 +1,9 @@
 .resume-section {
-  left: 0;
-  right: 0;
   background-color: var(--primary-dark);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 4rem 2rem;
-}
-
-.resume-header {
-  text-align: center;
-  margin-bottom: 1rem;
 }
 
 .resume-item {

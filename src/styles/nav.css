@@ -171,7 +171,7 @@ nav a {
     transition: all ease-in-out 0.4s;
     -moz-transition: all ease-in-out 0.4s;
     -webkit-transition: all ease-in-out 0.4s;
-    border-left: var(--section-border) 1px solid;
+    /* border-left: var(--section-border) 1px solid; */
   }
   .open-mobile-menu-overlay {
     position: absolute;

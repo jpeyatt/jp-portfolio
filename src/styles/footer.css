@@ -9,7 +9,6 @@ footer {
   right: 0;
   bottom: 0;
   background: var(--primary-dark);
-  border-top: 0.2rem #374856 solid;
 }
 
 .col-left {

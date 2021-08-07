@@ -57,7 +57,7 @@ const Nav: FunctionComponent = () => {
     return (
         <nav ref={navRef} className="at-top">
             <div className="brand-logo">
-                <a href="/">JP.</a>
+                <a href="/">Jp.</a>
             </div>
             <button ref={linksRef} id="mobile-menu-button" className="mobile-menu">
                 <div className="hamburger-line"></div>

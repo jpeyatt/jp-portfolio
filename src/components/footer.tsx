@@ -6,7 +6,7 @@ const Footer: FunctionComponent = () => {
         <footer id="contact" className="border-top">
             <div className="col-left">
                 <div className="brand-logo-footer">
-                    <a href="/">JP.</a>
+                    <a href="/">Jp.</a>
                 </div>
             </div>
             <div className="col-mid">
