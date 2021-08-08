@@ -2,8 +2,18 @@ import React, { FunctionComponent } from "react";
 import '../styles/footer.css';
 
 const Footer: FunctionComponent = () => {
+
+    const handleScrollTopTopClick = () => {
+        window.scroll({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
     return (
         <footer id="contact" className="border-top">
+            <button onClick={handleScrollTopTopClick} className="scroll-to-top-btn">
+                <span className="chevron"></span>
+            </button>
             <div className="col-left">
                 <div className="brand-logo-footer">
                     <a href="/">Jp.</a>
@@ -24,7 +34,7 @@ const Footer: FunctionComponent = () => {
                 </a>
             </div>
             <div className="col-right">
-                © 2021 Justin Peyatt
+                <span>© 2021 Justin Peyatt</span>
             </div>
         </footer>
     );
