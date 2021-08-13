@@ -5,7 +5,7 @@ const PreLoader: FunctionComponent = () => {
 
     return (
         <div className="preloader">
-            <div className="loader">Jp.</div>
+            <div className="logo">Jp.</div>
         </div>
     );
 };

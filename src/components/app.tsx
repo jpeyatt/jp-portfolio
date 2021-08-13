@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react';
+import React, { FunctionComponent, useEffect, useState } from 'react';
 import Header from './header';
 import Footer from './footer';
 import '../styles/app.css';
@@ -10,17 +10,24 @@ import PreLoader from './preloader';
 
 
 const App: FunctionComponent = () => {
+  const [showPreloader, setShowPreloader] = useState<boolean>(true);
 
+  useEffect(() => {
+    setTimeout(() => {
+      setShowPreloader(false);
+    }, 2600);
+  }, []);
 
   return (
-    <div id="app-wrapper">
-      <Nav />
-      <Header />
-      <Skills />
-      <Resume />
-      <Projects  />
-      <Footer />
-    </div>
+    showPreloader ? <PreLoader /> :
+      <div id="app-wrapper">
+        <Nav />
+        <Header />
+        <Skills />
+        <Resume />
+        <Projects />
+        <Footer />
+      </div>
   );
 }
 

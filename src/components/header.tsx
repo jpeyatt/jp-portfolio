@@ -13,7 +13,7 @@ const Header: FunctionComponent = () => {
     ];
 
     return (
-        <header id="portfolio-header ">
+        <header id="portfolio-header">
             <div id="stars" />
             <div id="stars2" />
             <div id="stars3" />
