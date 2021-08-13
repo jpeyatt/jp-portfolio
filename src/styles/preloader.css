@@ -1,0 +1,41 @@
+.preloader {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--primary-dark);
+    position: absolute;
+    z-index: 1000;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    animation: endloader 3s ease-out;
+}
+
+.loader {
+    font-size: 10rem;
+    color: transparent;
+    -webkit-text-stroke: 2px  var(--primary-highlight);
+    animation: pulse 3s alternate;
+}
+
+@keyframes pulse {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+
+@keyframes endloader {
+    from {
+        opacity: 100%;
+    }
+    99% {
+        opacity: 100%;
+    }
+    to {
+        opacity: 0;
+        display: none;
+    }
+}

@@ -6,6 +6,7 @@ import Skills from './skills';
 import Nav from './nav';
 import Resume from './resume';
 import Projects from './projects';
+import PreLoader from './preloader';
 
 
 const App: FunctionComponent = () => {
