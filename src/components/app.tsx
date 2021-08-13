@@ -15,11 +15,11 @@ const App: FunctionComponent = () => {
   useEffect(() => {
     setTimeout(() => {
       setShowPreloader(false);
-    }, 2600);
+    }, 2500);
   }, []);
 
   return (
-    showPreloader ? <PreLoader /> :
+      showPreloader ? <PreLoader /> :
       <div id="app-wrapper">
         <Nav />
         <Header />

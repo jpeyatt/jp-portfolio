@@ -6,23 +6,25 @@
   z-index: 1000;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; 
 }
 
-.logo {
-  font-size: 10rem;
-  color: var(--primary-dark);
-  animation: pulse 2.5s ease-in-out infinite;
+#logo path {
+  stroke-dasharray: 1234;
+  stroke-dashoffset: 1234;
+  stroke: var(--primary-light);
+  animation: trace 3s ease forwards, fadeOut 0.4s ease forwards 2.3s;
 }
 
-@keyframes pulse {
-  from {
-    text-shadow: 0 0 0px var(--primary-highlight);
+@keyframes trace {
+  to{
+    stroke-dashoffset: 10;
+    stroke: var(--primary-highlight);
   }
-  50% {
-    text-shadow: 0 0 16px var(--primary-highlight);
-  }
-  to {
-    text-shadow: 0 0 0px var(--primary-highlight);
+}
+
+@keyframes fadeOut {
+  to{
+    opacity: 0;
   }
 }
