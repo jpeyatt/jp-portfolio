@@ -12,14 +12,35 @@
 #logo path {
   stroke-dasharray: 1234;
   stroke-dashoffset: 1234;
-  stroke: var(--primary-light);
-  animation: trace 3s ease forwards, fadeOut 0.4s ease forwards 2.3s;
+  /* stroke: var(--primary-light); */
+  animation: 
+    trace 3s ease forwards, 
+    strokeColorChange 2s ease forwards, 
+    fadeOut 0.4s ease forwards 2.4s,
+    fillIn 0.6s ease forwards 1.6s;
+}
+
+@keyframes strokeColorChange {
+  from {
+    stroke: var(--primary-blue);
+  }
+  to {
+    stroke: var(--primary-highlight);
+  }
+}
+
+@keyframes fillIn {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: var(--primary-highlight);
+  }
 }
 
 @keyframes trace {
   to{
     stroke-dashoffset: 10;
-    stroke: var(--primary-highlight);
   }
 }
 
