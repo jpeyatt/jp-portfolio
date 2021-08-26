@@ -12,11 +12,11 @@ I will not be using any external libraries/frameworks for any JavaScript feature
 Since I'm still new-ish to React, this seemed like a suitable project to work knowledge.  Architecture-wise, I chose to use Function Components. 
 
 ## Things to come
-### `Tests`
+### Tests
 Unit tests with Jest
 Integration tests with Selium
 
-## `Projects`
+### Projects
 Project Card for screenshot/summary
 Project Modal for more details
 
