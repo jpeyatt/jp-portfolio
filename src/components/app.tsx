@@ -15,7 +15,7 @@ const App: FunctionComponent = () => {
   useEffect(() => {
     setTimeout(() => {
       setShowPreloader(false);
-    }, 2500);
+    }, 3500);
   }, []);
 
   return (
