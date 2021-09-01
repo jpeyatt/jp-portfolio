@@ -15,7 +15,7 @@
   stroke: var(--primary-highlight);
   filter: drop-shadow(0 0 8px var(--primary-highlight));
   animation: 
-    flicker 2.4s ease forwards 1s,
+    flicker 2.7s ease forwards 0.8s,
     trace 3.5s ease forwards,
     strokeColorChange 2s ease forwards;
     /* fadeOut 0.5s ease forwards 3s; */

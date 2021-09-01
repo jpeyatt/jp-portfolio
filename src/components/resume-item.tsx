@@ -1,14 +1,16 @@
 import React, { FunctionComponent, useEffect, useRef } from "react";
+import { IResumeItem } from '../models/resume-item.model';
 
-interface IResumeItemProps {
-    dates: string;
-    companyName: string;
-    title: string;
-    summary: string;
-    responsibilities: { key: string, text: string }[];
-}
-const ResumeItem: FunctionComponent<IResumeItemProps> = ({dates, companyName, title, summary, responsibilities}) => {
+const formatDates = (startDate: Date, endDate: Date, isCurrent: boolean): string => {
+    const start = `${startDate.toLocaleString('en-us', { month: 'long' })} ${startDate.getFullYear()}`;
+    const end = isCurrent ? 'Current' : `${endDate.toLocaleString('en-us', { month: 'long' })} ${endDate.getFullYear()}`;
+    return `${start} - ${end}`;
+};
+
+const ResumeItem: FunctionComponent<IResumeItem> = ({startDate, endDate, isCurrent, company, title, summary, responsibilities}) => {
     const resumeItemRef = useRef<HTMLDivElement>(null);
+    let dates = formatDates(startDate, endDate, isCurrent);
+    console.log(dates)
 
     const resumeItemInView = (el: HTMLDivElement | null): boolean => {
         if (el) {
@@ -19,6 +21,7 @@ const ResumeItem: FunctionComponent<IResumeItemProps> = ({dates, companyName, ti
         }
     }
     useEffect(() => {
+        
         window.addEventListener('scroll', () => {
             if (resumeItemInView(resumeItemRef.current)) {
                 resumeItemRef.current?.classList.add('scrolled');
@@ -30,7 +33,7 @@ const ResumeItem: FunctionComponent<IResumeItemProps> = ({dates, companyName, ti
             window.removeEventListener('scroll', () => {});
         }
         
-    });
+    }, [startDate, endDate]);
 
     return (
         <div ref={resumeItemRef} className="resume-item">
@@ -43,7 +46,7 @@ const ResumeItem: FunctionComponent<IResumeItemProps> = ({dates, companyName, ti
             </div>
             <div className="right-col">
                 <div>
-                    <div className="company-name">{companyName}</div>
+                    <div className="company-name">{company}</div>
                     <div className="dates">{dates}</div>
                 </div>
                 
@@ -51,12 +54,14 @@ const ResumeItem: FunctionComponent<IResumeItemProps> = ({dates, companyName, ti
                 <div className="summary">{summary}</div>
                 <ul className="responsibilities">
                     {
-                        responsibilities.map((r) => <li key={r.key}>{r.text}</li>)
+                        responsibilities.map((r) => <li key={r.id}>{r.text}</li>)
                     }
                 </ul>
             </div>
         </div>
     );
 };
+
+
 
 export default ResumeItem;
