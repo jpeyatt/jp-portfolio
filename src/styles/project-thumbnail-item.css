@@ -1,0 +1,23 @@
+.project-thumbnail {
+    text-align: center;
+    width: 32em;
+    margin: 2em;
+}
+
+.project-thumbnail h2 {
+    margin-bottom: 18px;
+    font-size: 24px;
+}
+
+.project-thumbnail img {
+    width: 100%;
+    filter: grayscale(100%);
+    border-radius: 8px;
+    transition: filter .4s ease;
+    box-shadow: 0 0 2px var(--primary-highlight);
+}
+
+.project-thumbnail img:hover {
+    cursor: pointer;
+    filter: grayscale(0%);
+}

@@ -1,4 +1,11 @@
+
 .projects-section {
     background-color: var(--primary-dark);
+    padding-bottom: 80px;
 }
 
+.project-thumbnails {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
