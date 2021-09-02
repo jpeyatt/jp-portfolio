@@ -16,7 +16,6 @@ const formSkills = (skillsData: ISkillItem[]): ISkillItem[][] => {
 const Skills: FunctionComponent = () => {
 
     const [leftSkills, rightSkills] = formSkills(SkillsData);
-    console.log({leftSkills, rightSkills})
 
     return (
         <section id="skills" className="portfolio-section skills-section">

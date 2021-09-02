@@ -10,7 +10,6 @@ const formatDates = (startDate: Date, endDate: Date, isCurrent: boolean): string
 const ResumeItem: FunctionComponent<IResumeItem> = ({startDate, endDate, isCurrent, company, title, summary, responsibilities}) => {
     const resumeItemRef = useRef<HTMLDivElement>(null);
     let dates = formatDates(startDate, endDate, isCurrent);
-    console.log(dates)
 
     const resumeItemInView = (el: HTMLDivElement | null): boolean => {
         if (el) {
