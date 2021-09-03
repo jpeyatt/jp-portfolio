@@ -132,6 +132,15 @@
 }
 
 @media (max-width: 900px) {
+    .project .project-body > * {
+        padding: 0;
+    }
+    .project-screenshot img {
+        margin-bottom: 1em;
+    }
+    .project .project-body > * {
+        padding: 0;
+    }
     .project .project-body {
         flex-direction: column;
         text-align: center;
@@ -148,5 +157,17 @@
 @media (max-width: 590px) {
     .project-screenshot img {
         max-width: 26em;
+    }
+}
+
+@media (max-width: 450px) {
+    .project-screenshot img {
+        max-width: 20em;
+    }
+    .project .project-header {
+        font-size: 1.5rem;
+    }
+    .project .project-footer { 
+        padding: 1em;
     }
 }
