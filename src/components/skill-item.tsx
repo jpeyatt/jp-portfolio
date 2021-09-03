@@ -9,8 +9,6 @@ const SkillItem: FunctionComponent<ISkillTypeProps> = ({ skillName, percentage }
     const [loadedWidth, setLoadedWidth] = useState(0);
     const loadedInnerRef = useRef<HTMLDivElement>(null);
 
-
-
     const skillInView = (el: HTMLDivElement | null): boolean => {
         if (el) {
             const elTop = el?.getBoundingClientRect().top;
@@ -22,7 +20,6 @@ const SkillItem: FunctionComponent<ISkillTypeProps> = ({ skillName, percentage }
 
     useEffect(() => {
         setLoadedWidth(percentage);
-
         window.addEventListener('scroll', () => {
             if (skillInView(loadedInnerRef.current)) {
                 loadedInnerRef.current?.classList.add('loaded-inner');
